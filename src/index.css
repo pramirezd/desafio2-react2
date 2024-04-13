@@ -64,3 +64,21 @@ a {
 .p-3 {
   padding: 30px;
 }
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.like {
+  cursor: pointer;
+}

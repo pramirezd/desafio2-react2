@@ -1,26 +1,26 @@
 import { Route, Routes } from "react-router-dom";
+import { GalleryProvider } from "./context/GalleryContext";
 import Navbar from "./components/Navbar";
-
 import Favorites from "./views/Favorites";
 import Home from "./views/Home";
 
-const PHOTO_URL = "/photos.json";
 
 const App = () => {
   return (
     <div>
-      <Navbar />
-
-      <Routes>
-        <Route
-          path="/"
-          element={<Home />}
-        />
-        <Route
-          path="/favoritos"
-          element={<Favorites />}
-        />
-      </Routes>
+      <GalleryProvider>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={<Home />}
+          />
+          <Route
+            path="/favoritos"
+            element={<Favorites />}
+          />
+        </Routes>
+      </GalleryProvider>
     </div>
   );
 };
